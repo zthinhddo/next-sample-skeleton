@@ -7,6 +7,14 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch: # allows you to run the workflow manually
+
+# Possible error: Unable to get ACTIONS_ID_TOKEN_REQUEST_URL env variable
+permissions: # allows the workflow to access the repository
+ contents: read
+ pages: write
+ id-token: write
+
 
 jobs:
   build:
