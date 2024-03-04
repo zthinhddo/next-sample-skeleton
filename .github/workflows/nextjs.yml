@@ -15,6 +15,9 @@ permissions: # allows the workflow to access the repository
  pages: write
  id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
